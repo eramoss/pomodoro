@@ -17,12 +17,12 @@ export const Header = () => {
     isSelected2 = ''
     isSelected3 = ''
   }
-  if (LEFT_POSITION === 'left-[120px]') {
+  if (LEFT_POSITION === 'sm:left-32 left-28') {
     isSelected1 = ''
     isSelected2 = 'isSelected'
     isSelected3 = ''
   }
-  if (LEFT_POSITION === 'left-[240px]') {
+  if (LEFT_POSITION === 'sm:left-64 left-56') {
     isSelected1 = ''
     isSelected2 = ''
     isSelected3 = 'isSelected'
@@ -36,29 +36,29 @@ export const Header = () => {
     }
   } 
   const Mode2 = () => {
-    if (LEFT_POSITION === 'left-[120px]') {
+    if (LEFT_POSITION === 'sm:left-32 left-28') { // resolvind problem forr phone devices (sm =  min widht 640px)
       return
     } else {
-      SET_LEFT_POSITION('left-[120px]')
+      SET_LEFT_POSITION('sm:left-32 left-28')
     }
   } 
   const Mode3 = () => {
-    if (LEFT_POSITION === 'left-[240px] ') {
+    if (LEFT_POSITION === 'sm:left-64 left-56') {
       return
     } else {
-      SET_LEFT_POSITION('left-[240px]')
+      SET_LEFT_POSITION('sm:left-64 left-56')
     }
   } 
 
 
 
   return (
-    <div className="bg-midnight-dark rounded-full  flex justify-center items-center py-2 px-3  " >
+    <div className="bg-midnight-dark rounded-full  flex justify-center items-center py-2 px-3 sm " >
 
       
         <nav className="relative h-full text-gray-300 px-6 py-2 left " >
 
-          <div className="flex gap-9">
+          <div className="flex gap-10">
             
             <button onClick={Mode1} className={` ${isSelected1} relative inline-block z-10`}>
               pomodoro
