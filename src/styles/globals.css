@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap');
+
+html {
+  font-family: 'Alexandria', sans-serif;
+}
+
+.isSelected {
+
+  --tw-text-opacity: 1;
+  color: #12172c
+
+}
+
+  .shadows {
+  border-radius: 50%;
+  background: linear-gradient(145deg, #12172b, #232846);
+  box-shadow:  20px 20px 45px #0e1020,
+             -20px -20px 45px #384080;
+}
+
+.shadows-dark {
+  border-radius: 100%;
+  background: linear-gradient(145deg, #12172c, #151c34);
+}
+
+.stylePomodoro {
+  background: rgb(245,110,111);
+background: linear-gradient(0deg, rgba(245,110,111,1) 0%, rgba(245,122,110,1) 35%, rgba(245,161,110,1) 100%);}
