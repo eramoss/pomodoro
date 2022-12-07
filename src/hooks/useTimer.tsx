@@ -4,7 +4,7 @@ export const useTimer = () => {
 
   const INITIAL_TIME_IN_SECONDS = 25 * 60//25 minutes
   const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS)
-  const [isPause , setisPause] = useState(false)
+  const [isPause , setisPause] = useState(true)
 
   const Pauser = () =>{
     if(isPause === false) {
@@ -17,15 +17,18 @@ export const useTimer = () => {
   console.log(time)
 
   useEffect(() => {
-    if (isPause === true) {
-      return
-    }
+    
     if (time === 0 ) {
      
       return
     } else {
       setTimeout(() => {
-      setTime(time - 1)
+        if (isPause === true) {
+          
+        } else {
+          setTime(time - 1)
+        }
+        
     }, 1000)
     }
     
