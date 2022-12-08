@@ -1,4 +1,6 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
+import ModesContext from "../contexts/ModesContext"
+
 
 
 export const Header = () => {
@@ -49,6 +51,7 @@ export const Header = () => {
       SET_LEFT_POSITION('sm:left-64 left-56')
     }
   } 
+
 
 
 
