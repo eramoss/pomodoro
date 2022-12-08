@@ -19,10 +19,24 @@ module.exports = {
       boxShadow: {
         'light': '-11px -11px 44px #1c2544',
         'dark': '11px 11px 44px #0c0f1c',
-      }
+      },
+      
       
      
     },
+
+
+    keyframes: {
+      jurandir: {
+        '0%': { height: '0px' },
+        '100%': { height: '100vh' },
+      }
+    },
+
+    animation: {
+      jurandir: 'jurandir 3s ease-in-out',
+    }
+
   },
   plugins: [],
 }
