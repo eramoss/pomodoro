@@ -6,17 +6,20 @@ export const useTimer = () => {
   const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS)
   const [isPause , setisPause] = useState(true)
 
+
   const Pauser = () =>{
     if(isPause === false) {
       setisPause(true)
+      
     } else {
       setisPause(false)
+     
     }
     
   }
-  console.log(time)
 
-  useEffect(() => {
+
+  useEffect( () => {
     
     if (time === 0 ) {
      
@@ -24,7 +27,7 @@ export const useTimer = () => {
     } else {
       setTimeout(() => {
         if (isPause === true) {
-          
+          return
         } else {
           setTime(time - 1)
         }
