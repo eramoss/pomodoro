@@ -43,3 +43,27 @@ html {
 .stylePomodoro {
   background: rgb(245,110,111);
 background: linear-gradient(0deg, rgba(245,110,111,1) 0%, rgba(245,122,110,1) 35%, rgba(245,161,110,1) 100%);}
+
+
+.left0 {
+  left: 0px;
+}
+
+
+.left28 {
+  left: 7rem;
+}
+
+
+.left56 {
+  left: 14rem;
+}
+
+@media (min-width: 640px) {
+  .left28{
+    left: 8rem;
+  }
+  .left56 {
+    left: calc(16rem - 3px);
+  }
+}

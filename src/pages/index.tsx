@@ -1,7 +1,7 @@
 
 import { Header } from "../components/Header";
 
-import { PageSettings } from "../components/Settings/PageSettings";
+import { ModalSettings } from "../components/Settings/ModalSettings";
 import { Starter } from "../components/Starter";
 
 
@@ -17,7 +17,7 @@ export default function Home() {
       <h1 className="text-white font-bold text-3xl" >pomodoro</h1>
       <Header/>
       <Starter/>
-      <PageSettings/>
+      <ModalSettings/>
      
     </div>
   )
