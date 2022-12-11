@@ -6,7 +6,10 @@ import { Starter } from "../components/Starter";
 
 
 
+
 export default function Home() {
+
+
 
 
   return (
@@ -15,6 +18,7 @@ export default function Home() {
       <Header/>
       <Starter/>
       <PageSettings/>
+     
     </div>
   )
 }

@@ -12,7 +12,7 @@ export const ButtonSettings = ({onClick}:buttonPropps) => {
 
 
   return (
-    <div className='text-4xl text-gray-300' >
+    <div className='text-4xl text-gray-300 z-50' >
       <button onClick={onClick} >
         <IoSettingsSharp/>
       </button>

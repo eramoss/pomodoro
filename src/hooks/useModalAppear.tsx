@@ -6,11 +6,20 @@ export const useModalAppear = () => {
 
   const [IsModal,setIsModal] = useState('close-modal')
 
-  const OpenModal = () => {
+  const setModal = () => {
     if (IsModal === 'close-modal') {
       setIsModal('open-modal')
     }
+    if (IsModal === 'open-modal') {
+      setIsModal('close-modal')
+    }
+  }
+
+  const CloseModal = () => {
+    if (IsModal === 'open-modal') {
+      setIsModal('close-modal')
+    }
   }
  
-  return {OpenModal,IsModal}
+  return {setModal,IsModal,CloseModal}
 }
