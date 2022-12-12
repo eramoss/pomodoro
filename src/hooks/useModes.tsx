@@ -7,9 +7,9 @@ export const useModes = () => {
   var isSelected3 = ''
 
   const [LEFT_POSITION, SET_LEFT_POSITION] = useState('left0')
-  // left-[0px] mode1 DEFAULT
-  // left-[120px] mode2
-  // left-[240px] mode3
+  // left-[0rem] mode1 DEFAULT
+  // left-[7rem] mode2
+  // left-[14rem] mode3
 
   if (LEFT_POSITION === 'left0') {
     isSelected1 = 'isSelected'
