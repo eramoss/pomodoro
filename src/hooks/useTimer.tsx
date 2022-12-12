@@ -1,46 +1,35 @@
-import { useEffect, useState } from "react"
+import { useEffect, useState } from "react";
 
 export const useTimer = () => {
+  const INITIAL_TIME_IN_SECONDS = 25 * 60; //25 minutes
+  const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS);
+  const [isPause, setisPause] = useState(true);
 
-  const INITIAL_TIME_IN_SECONDS = 25 * 60//25 minutes
-  const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS)
-  const [isPause , setisPause] = useState(true)
-
-
-  const Pauser = () =>{
-    if(isPause === false) {
-      setisPause(true)
-      
+  const Pauser = () => {
+    if (isPause === false) {
+      setisPause(true);
     } else {
-      setisPause(false)
-     
+      setisPause(false);
     }
-    
-  }
+  };
 
-
-  useEffect( () => {
-    
-    if (time === 0 ) {
-     
-      return
+  useEffect(() => {
+    if (time === 0) {
+      return;
     } else {
       setTimeout(() => {
         if (isPause === true) {
-          return
+          return;
         } else {
-          setTime(time - 1)
+          setTime(time - 1);
         }
-        
-    }, 1000)
+      }, 1000);
     }
-    
-    
-  }, [time, isPause])
+  }, [time, isPause]);
 
-  var StarterPause = (isPause === true) ? 'S T A R T' : 'P A U S E'
-  var Minutes = Math.floor(time / 60).toString()
-  var seconds = (time % 60).toString()
+  var StarterPause = isPause === true ? "S T A R T" : "P A U S E";
+  var Minutes = Math.floor(time / 60).toString();
+  var seconds = (time % 60).toString();
 
-  return {Minutes, seconds, Pauser, StarterPause}
-}
+  return { Minutes, seconds, Pauser, StarterPause };
+};

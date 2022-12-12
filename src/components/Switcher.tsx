@@ -27,12 +27,12 @@ export const Switcher = ({functionSwitch,label}:SwitcherProps) => {
 
   return (
     <div className="flex items-center gap-2 ">
-        <label htmlFor="button1">{label}</label>
-        <button onClick={functionSwitch}>
+      <label htmlFor="button1">{label}</label>
+        <button onClick={functionSwitch }>
           <button onClick={handleClick} className={`rounded-full w-14 h-8 px-[1px] border-[3px] border-black focus:border-[3.3px] flex items-center  ${switch1} `} id="button1">
-            <div className={`rounded-full h-6 w-6 ${positionSwitch} bg-slate-50 transition`} ></div>
-          </button>
+          <div className={`rounded-full h-6 w-6 ${positionSwitch} bg-slate-50 transition`} ></div>
         </button>
-      </div>
+      </button>
+    </div>
   )
 }

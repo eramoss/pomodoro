@@ -1,13 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Alexandria:wght@400;500;600;700;800&display=swap");
 
 html {
-  font-family: 'Alexandria', sans-serif;
-
+  font-family: "Alexandria", sans-serif;
 }
-
 
 .open-modal {
   opacity: 1;
@@ -17,22 +15,18 @@ html {
 .close-modal {
   opacity: 0;
   z-index: 0;
-  width: 0px
+  width: 0px;
 }
-
 
 .isSelected {
-
   --tw-text-opacity: 1;
-  color: #12172c
-
+  color: #12172c;
 }
 
-  .shadows {
+.shadows {
   border-radius: 50%;
   background: linear-gradient(145deg, #12172b, #232846);
-  box-shadow:  20px 20px 45px #0e1020,
-             -20px -20px 45px #384080;
+  box-shadow: 20px 20px 45px #0e1020, -20px -20px 45px #384080;
 }
 
 .shadows-dark {
@@ -41,26 +35,29 @@ html {
 }
 
 .stylePomodoro {
-  background: rgb(245,110,111);
-background: linear-gradient(0deg, rgba(245,110,111,1) 0%, rgba(245,122,110,1) 35%, rgba(245,161,110,1) 100%);}
-
+  background: rgb(245, 110, 111);
+  background: linear-gradient(
+    0deg,
+    rgba(245, 110, 111, 1) 0%,
+    rgba(245, 122, 110, 1) 35%,
+    rgba(245, 161, 110, 1) 100%
+  );
+}
 
 .left0 {
   left: 0px;
 }
 
-
 .left28 {
   left: 7rem;
 }
-
 
 .left56 {
   left: 14rem;
 }
 
 @media (min-width: 640px) {
-  .left28{
+  .left28 {
     left: 8rem;
   }
   .left56 {
