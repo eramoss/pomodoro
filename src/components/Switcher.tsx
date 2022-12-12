@@ -14,21 +14,21 @@ export const Switcher = ({functionSwitch,label,icon}:SwitcherProps) => {
 
   const handleClick = () => {
     if (switch1 === 'bg-gray-400') {
-      setSwitch1('bg-gray-800')
+      setSwitch1('bg-orange-900')
       
     } else {
       setSwitch1('bg-gray-400')
     }
   }
 
-  if (switch1 === 'bg-gray-800') {
-    positionSwitch = 'translate-x-6'
+  if (switch1 === 'bg-orange-900') {
+    positionSwitch = 'translate-x-4'
   }
 
 
   return (
-    <div className="flex items-center w-full justify-between bg-white p-3 border-b border-gray-300 ">
-      <div className="flex items-center gap-4">
+    <div className="flex items-center w-full justify-between  bg-white p-3 border-b-[0.5px] border-gray-300 rounded-full ">
+      <div className="flex items-center gap-4 text-clip ">
         <div className="text-3xl">
           {icon}
         </div>
@@ -38,8 +38,8 @@ export const Switcher = ({functionSwitch,label,icon}:SwitcherProps) => {
       
       <span>
         <div onClick={functionSwitch }>
-          <button onClick={handleClick} className={`rounded-full w-14 h-8 px-[1px] border-[3px] border-black focus:border-[3.3px] flex items-center  ${switch1} `}>
-            <div className={`rounded-full h-6 w-6 ${positionSwitch} bg-slate-50 transition`} ></div>
+          <button onClick={handleClick} className={`rounded-full w-10 h-5 bgora bg-opacity-40 border-gray-500 flex items-center  ${switch1} `}>
+            <div className={`rounded-full h-6 w-6 border border-yellow-900 border-opacity-35 ${positionSwitch} bg-slate-50 transition`} ></div>
           </button>
         </div>
       </span>

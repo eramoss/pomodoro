@@ -30,7 +30,7 @@ export const ModalSettings = ({ children }: SettingsProps) => {
       {ModalCloser}
 
       <div
-        className={`absolute  ${IsModal} bg-gray-300  left-0 top-0 h-screen  rounded transition-all duration-300 foc `}
+        className={`absolute  ${IsModal} bg-gray-300  left-0 top-0 h-screen  rounded-r-lg  transition-all duration-300 foc `}
       >
         <div className="w-full h-full flex justify-end items-start p-4">
           <button onClick={CloseModal} className=" text-3xl z-30">
