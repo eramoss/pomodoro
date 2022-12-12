@@ -1,13 +1,14 @@
 import React, { useState } from "react"
 
 interface SwitcherProps {
+  id: string;
   label: string;
   icon?: React.ReactNode;
   functionSwitch : () => void
 }
 
 
-export const Switcher = ({functionSwitch,label,icon}:SwitcherProps) => {
+export const Switcher = ({functionSwitch,label,icon,id}:SwitcherProps) => {
 
   const [switch1, setSwitch1] = useState('bg-gray-400')
   var positionSwitch = 'translate-x-0'
@@ -33,12 +34,12 @@ export const Switcher = ({functionSwitch,label,icon}:SwitcherProps) => {
           {icon}
         </div>
         
-        <label  className="text-md tracking-wider" >{label}</label>
+        <label htmlFor={id}  className="text-md tracking-wider" >{label}</label>
       </div>
       
       <span>
         <div onClick={functionSwitch }>
-          <button onClick={handleClick} className={`rounded-full w-10 h-5 bgora bg-opacity-40 border-gray-500 flex items-center  ${switch1} `}>
+          <button id={id} onClick={handleClick} className={`rounded-full w-10 h-5 bgora bg-opacity-40 border-gray-500 flex items-center  ${switch1} `}>
             <div className={`rounded-full h-6 w-6 border border-yellow-900 border-opacity-35 ${positionSwitch} bg-slate-50 transition`} ></div>
           </button>
         </div>

@@ -1,5 +1,5 @@
 import { Switcher } from "../Switcher";
-import {MdDarkMode, MdOutlineModeEditOutline} from "react-icons/md"
+import {MdLightMode, MdOutlineModeEditOutline} from "react-icons/md"
 import {RiContrast2Fill} from 'react-icons/ri'
 import {TfiAlarmClock} from 'react-icons/tfi'
 
@@ -13,8 +13,8 @@ export const PageSettings = () => {
   return (
     <div className=" w-full h-full   py-16 flex flex-col items-center justify-start gap-5 px-4 overflow-hidden ">
       <div className="w-full flex justify-center items-start flex-col mt-10 gap-4 ">
-        <Switcher  icon={<MdDarkMode className="text-midnight" />} label= "Dark Mode" functionSwitch={handleClick} />
-        <Switcher icon={<RiContrast2Fill className="text-midnight"/>} label="high Contrast" functionSwitch={handleClick} />
+        <Switcher id="button1" icon={<MdLightMode className="text-midnight" />} label= "Dark Mode" functionSwitch={handleClick} />
+        <Switcher id="button2" icon={<RiContrast2Fill className="text-midnight"/>} label="high Contrast" functionSwitch={handleClick} />
       </div>
 
       <div className=" bg-white h-44 rounded-2xl w-full text-gray-600 p-4">
