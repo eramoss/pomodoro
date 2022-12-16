@@ -64,3 +64,106 @@ html {
     left: calc(16rem - 3px);
   }
 }
+
+.moveStarterUp2 {
+  animation-name: moveStarterUp2;
+  animation-duration: 1.5s;
+}
+
+.moveStarterDown2 {
+  animation-name: moveStarterDown2;
+  animation-duration: 1.5s;
+}
+
+.moveStarterUp {
+  transform: translate(0, 0);
+  animation-name: moveStarterUp;
+  animation-duration: 1.5s;
+}
+
+.moveStarterDown {
+  animation-name: moveStarterDown;
+  animation-duration: 1.5s;
+}
+
+.moveStarterUp3 {
+  animation-name: moveStarterUp3;
+  animation-duration: 1.5s;
+}
+
+.moveStarterDown3 {
+  animation-name: moveStarterDown3;
+  animation-duration: 1.5s;
+}
+
+@keyframes moveStarterUp {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveStarterDown {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveStarterUp2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveStarterDown2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveStarterUp3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, -20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes moveStarterDown3 {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(0, 20rem);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

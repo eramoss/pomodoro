@@ -9,7 +9,7 @@ interface SettingsProps {
 
 export const ModalSettings = ({ children }: SettingsProps) => {
   const { IsModal, setModal, CloseModal } = useModalAppear();
-  var ModalCloser = <></>;
+  var ModalCloser = null;
 
   if (IsModal === "open-modal") {
     ModalCloser = (
@@ -19,7 +19,7 @@ export const ModalSettings = ({ children }: SettingsProps) => {
       ></button>
     );
   } else {
-    ModalCloser = <></>;
+    ModalCloser = null;
   }
 
   return (

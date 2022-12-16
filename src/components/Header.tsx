@@ -18,7 +18,9 @@ export const Header = () => {
       <nav className="relative h-full text-gray-300 px-6 py-2 left ">
         <div className="flex gap-10">
           <button
-            onClick={Mode1}
+            onClick={() => {
+              Mode1();
+            }}
             className={` ${isSelected1} relative inline-block z-10`}
           >
             pomodoro
