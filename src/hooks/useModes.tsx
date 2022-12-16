@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { useTimer } from "./useTimer";
 
 export const useModes = () => {
-  const { time } = useTimer();
   var isSelected1 = "isSelected";
   var isSelected2 = "";
   var isSelected3 = "";

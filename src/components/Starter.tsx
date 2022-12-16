@@ -1,5 +1,6 @@
 import { useModes } from "../hooks/useModes";
 import { useTimer } from "../hooks/useTimer";
+import { BiReset } from "react-icons/bi";
 
 export const Starter = () => {
   const {
@@ -12,6 +13,7 @@ export const Starter = () => {
     INITIAL_TIME_IN_SECONDS,
     SECOND_TIME_IN_SECONDS,
     THIRD_TIME_IN_SECONDS,
+    setisPause,
   } = useTimer();
   const {
     Mode1,
@@ -27,6 +29,31 @@ export const Starter = () => {
 
   return (
     <div className=" flex flex-col gap-16">
+      <button
+        onClick={() => {
+          if (isSelected1 === "isSelected") {
+            setisPause(true);
+            setTimeout(() => {
+              setTime(INITIAL_TIME_IN_SECONDS);
+            }, 750);
+          }
+          if (isSelected2 === "isSelected") {
+            setisPause(true);
+            setTimeout(() => {
+              setTime(SECOND_TIME_IN_SECONDS);
+            }, 750);
+          }
+          if (isSelected3 === "isSelected") {
+            setisPause(true);
+            setTimeout(() => {
+              setTime(THIRD_TIME_IN_SECONDS);
+            }, 750);
+          }
+        }}
+        className="bg-orange-datail rounded-full fixed top-4 right-4 text-lg flex p-2"
+      >
+        <BiReset className="text-3xl" />
+      </button>
       <div className="bg-midnight-dark rounded-full  flex justify-center items-center py-2 px-3 sm ">
         <nav className="relative h-full text-gray-300 px-6 py-2 left ">
           <div className="flex gap-10">
