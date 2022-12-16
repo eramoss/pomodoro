@@ -7,7 +7,6 @@ interface buttonPropps {
 }
 
 export const ButtonSettings = ({ onClick }: buttonPropps) => {
-
   const { IsModal, setModal, CloseModal } = useModalAppear();
 
   return (

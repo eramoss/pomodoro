@@ -1,16 +1,24 @@
 import { useEffect, useState } from "react";
+import { useTimer } from "./useTimer";
 
 export const useModes = () => {
+  const { time } = useTimer();
   var isSelected1 = "isSelected";
   var isSelected2 = "";
   var isSelected3 = "";
   var animationDown = "";
   var animationUp = "";
 
-  const [LEFT_POSITION, SET_LEFT_POSITION] = useState("left0");
+  const [LEFT_POSITION, SET_LEFT_POSITION] = useState("left-0");
   // left-[0rem] mode1 DEFAULT
   // left-[7rem] mode2
   // left-[14rem] mode3
+
+  if (LEFT_POSITION === "left-0") {
+    isSelected1 = "isSelected";
+    isSelected2 = "";
+    isSelected3 = "";
+  }
 
   if (LEFT_POSITION === "left0") {
     isSelected1 = "isSelected";
@@ -23,7 +31,6 @@ export const useModes = () => {
     isSelected1 = "";
     isSelected2 = "isSelected";
     isSelected3 = "";
-
     animationDown = "moveStarterDown2";
     animationUp = "moveStarterUp2";
   }

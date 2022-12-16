@@ -43,5 +43,6 @@ export const useTimer = () => {
     INITIAL_TIME_IN_SECONDS,
     THIRD_TIME_IN_SECONDS,
     setTime,
+    time,
   };
 };
