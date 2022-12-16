@@ -2,7 +2,7 @@ import { useModes } from "../hooks/useModes";
 import { useTimer } from "../hooks/useTimer";
 
 export const Starter = () => {
-  const { Minutes, seconds, Pauser, StarterPause } = useTimer();
+  const { Minutes, seconds, Pauser, StarterPause, isPause } = useTimer();
   const {
     Mode1,
     Mode2,
@@ -21,15 +21,15 @@ export const Starter = () => {
         <nav className="relative h-full text-gray-300 px-6 py-2 left ">
           <div className="flex gap-10">
             <button
-              onClick={() => {
-                Mode1();
-              }}
+              disabled={!isPause}
+              onClick={Mode1}
               className={` ${isSelected1} relative inline-block z-10`}
             >
               pomodoro
             </button>
 
             <button
+              disabled={!isPause}
               onClick={Mode2}
               className={` ${isSelected2} relative inline-block z-10`}
             >
@@ -37,6 +37,7 @@ export const Starter = () => {
             </button>
 
             <button
+              disabled={!isPause}
               onClick={Mode3}
               className={` ${isSelected3} relative inline-block z-10`}
             >

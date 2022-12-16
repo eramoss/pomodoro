@@ -31,5 +31,5 @@ export const useTimer = () => {
   var Minutes = Math.floor(time / 60).toString();
   var seconds = (time % 60).toString();
 
-  return { Minutes, seconds, Pauser, StarterPause };
+  return { Minutes, seconds, Pauser, StarterPause, isPause };
 };
