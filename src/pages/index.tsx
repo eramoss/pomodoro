@@ -1,4 +1,3 @@
-import { Header } from "../components/Header";
 import { ModalSettings } from "../components/Settings/ModalSettings";
 import { PageSettings } from "../components/Settings/PageSettings";
 import { Starter } from "../components/Starter";
