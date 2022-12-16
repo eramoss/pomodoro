@@ -2,7 +2,17 @@ import { useModes } from "../hooks/useModes";
 import { useTimer } from "../hooks/useTimer";
 
 export const Starter = () => {
-  const { Minutes, seconds, Pauser, StarterPause, isPause } = useTimer();
+  const {
+    Minutes,
+    seconds,
+    Pauser,
+    setTime,
+    StarterPause,
+    isPause,
+    INITIAL_TIME_IN_SECONDS,
+    SECOND_TIME_IN_SECONDS,
+    THIRD_TIME_IN_SECONDS,
+  } = useTimer();
   const {
     Mode1,
     Mode2,
@@ -22,7 +32,14 @@ export const Starter = () => {
           <div className="flex gap-10">
             <button
               disabled={!isPause}
-              onClick={Mode1}
+              onClick={() => {
+                Mode1();
+                if (!isSelected1) {
+                  setTimeout(() => {
+                    setTime(INITIAL_TIME_IN_SECONDS);
+                  }, 750);
+                }
+              }}
               className={` ${isSelected1} relative inline-block z-10`}
             >
               pomodoro
@@ -30,7 +47,14 @@ export const Starter = () => {
 
             <button
               disabled={!isPause}
-              onClick={Mode2}
+              onClick={() => {
+                Mode2();
+                if (!isSelected2) {
+                  setTimeout(() => {
+                    setTime(SECOND_TIME_IN_SECONDS);
+                  }, 750);
+                }
+              }}
               className={` ${isSelected2} relative inline-block z-10`}
             >
               alert break
@@ -38,7 +62,14 @@ export const Starter = () => {
 
             <button
               disabled={!isPause}
-              onClick={Mode3}
+              onClick={() => {
+                Mode3();
+                if (!isSelected3) {
+                  setTimeout(() => {
+                    setTime(THIRD_TIME_IN_SECONDS);
+                  }, 750);
+                }
+              }}
               className={` ${isSelected3} relative inline-block z-10`}
             >
               long break
@@ -50,7 +81,7 @@ export const Starter = () => {
           ></div>
         </nav>
       </div>
-      <div className=" shadows h-96 w-96  flex justify-center items-center ">
+      <div className=" shadows h-96 w-96 flex justify-center items-center ">
         <div className="relative z-10 overflow-hidden  rounded-full">
           <button
             onClick={Pauser}

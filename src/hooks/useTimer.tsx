@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 
 export const useTimer = () => {
   const INITIAL_TIME_IN_SECONDS = 25 * 60; //25 minutes
+  const SECOND_TIME_IN_SECONDS = 10 * 60; //10 minutes
+  const THIRD_TIME_IN_SECONDS = 30 * 60; //30 minutes
   const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS);
   const [isPause, setisPause] = useState(true);
 
@@ -31,5 +33,15 @@ export const useTimer = () => {
   var Minutes = Math.floor(time / 60).toString();
   var seconds = (time % 60).toString();
 
-  return { Minutes, seconds, Pauser, StarterPause, isPause };
+  return {
+    Minutes,
+    seconds,
+    Pauser,
+    StarterPause,
+    isPause,
+    SECOND_TIME_IN_SECONDS,
+    INITIAL_TIME_IN_SECONDS,
+    THIRD_TIME_IN_SECONDS,
+    setTime,
+  };
 };
