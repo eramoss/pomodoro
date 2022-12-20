@@ -2,17 +2,6 @@ import { useEffect, useState } from "react";
 import { useModes } from "./useModes";
 
 export const useTimer = () => {
-  const {
-    Mode1,
-    Mode2,
-    Mode3,
-    isSelected1,
-    isSelected2,
-    isSelected3,
-    LEFT_POSITION,
-    animationDown,
-    animationUp,
-  } = useModes();
   const INITIAL_TIME_IN_SECONDS = 25 * 60; //25 minutes
   const SECOND_TIME_IN_SECONDS = 10 * 60; //10 minutes
   const THIRD_TIME_IN_SECONDS = 30 * 60; //30 minutes
@@ -34,13 +23,11 @@ export const useTimer = () => {
       setTime(SLEEP_TIME_IN_SECONDS);
       return;
     } else {
-      setTimeout(() => {
-        if (isPause === true) {
-          return;
-        } else {
+      if (!isPause) {
+        setTimeout(() => {
           setTime(time - 1);
-        }
-      }, 1000);
+        }, 1000);
+      }
     }
   }, [time, isPause, SLEEP_TIME_IN_SECONDS]);
 

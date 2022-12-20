@@ -33,15 +33,27 @@ export const Starter = () => {
         onClick={() => {
           if (isSelected1 === "isSelected") {
             setisPause(true);
-            setTime(INITIAL_TIME_IN_SECONDS);
+            const interval = setInterval(
+              () => setTime(INITIAL_TIME_IN_SECONDS),
+              1
+            );
+            setTimeout(() => clearInterval(interval), 1000);
           }
           if (isSelected2 === "isSelected") {
             setisPause(true);
-            setTime(SECOND_TIME_IN_SECONDS);
+            const interval = setInterval(
+              () => setTime(SECOND_TIME_IN_SECONDS),
+              1
+            );
+            setTimeout(() => clearInterval(interval), 1000);
           }
           if (isSelected3 === "isSelected") {
             setisPause(true);
-            setTime(THIRD_TIME_IN_SECONDS);
+            const interval = setInterval(
+              () => setTime(THIRD_TIME_IN_SECONDS),
+              1
+            );
+            setTimeout(() => clearInterval(interval), 1000);
           }
         }}
         className="bg-orange-datail rounded-full fixed top-4 right-4 text-lg flex p-2"
