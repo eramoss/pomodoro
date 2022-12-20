@@ -8,10 +8,13 @@ export const useTimer = () => {
   const SLEEP_TIME_IN_SECONDS = 5 * 60; //30 minutes
   const [time, setTime] = useState(INITIAL_TIME_IN_SECONDS);
   const [isPause, setisPause] = useState(true);
+  const { isSelected1, isSelected2, isSelected3 } = useModes();
 
   const Pauser = () => {
     if (isPause === false) {
       setisPause(true);
+      const interval = setInterval(() => setTime(time), 1);
+      setTimeout(() => clearInterval(interval), 1000);
     } else {
       setisPause(false);
     }
@@ -35,6 +38,23 @@ export const useTimer = () => {
   var Minutes = Math.floor(time / 60).toString();
   var seconds = (time % 60).toString();
 
+  const resetTimer = () => {
+    if (isSelected1 === "isSelected") {
+      setisPause(true);
+      const interval = setInterval(() => setTime(INITIAL_TIME_IN_SECONDS), 1);
+      setTimeout(() => clearInterval(interval), 1000);
+    }
+    if (isSelected2 === "isSelected") {
+      setisPause(true);
+      const interval = setInterval(() => setTime(SECOND_TIME_IN_SECONDS), 1);
+      setTimeout(() => clearInterval(interval), 1000);
+    }
+    if (isSelected3 === "isSelected") {
+      setisPause(true);
+      const interval = setInterval(() => setTime(THIRD_TIME_IN_SECONDS), 1);
+    }
+  };
+
   return {
     Minutes,
     seconds,
@@ -47,5 +67,6 @@ export const useTimer = () => {
     setTime,
     time,
     setisPause,
+    resetTimer,
   };
 };

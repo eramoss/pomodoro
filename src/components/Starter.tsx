@@ -14,6 +14,7 @@ export const Starter = () => {
     SECOND_TIME_IN_SECONDS,
     THIRD_TIME_IN_SECONDS,
     setisPause,
+    resetTimer,
   } = useTimer();
   const {
     Mode1,
@@ -30,32 +31,7 @@ export const Starter = () => {
   return (
     <div className=" flex flex-col gap-16">
       <button
-        onClick={() => {
-          if (isSelected1 === "isSelected") {
-            setisPause(true);
-            const interval = setInterval(
-              () => setTime(INITIAL_TIME_IN_SECONDS),
-              1
-            );
-            setTimeout(() => clearInterval(interval), 1000);
-          }
-          if (isSelected2 === "isSelected") {
-            setisPause(true);
-            const interval = setInterval(
-              () => setTime(SECOND_TIME_IN_SECONDS),
-              1
-            );
-            setTimeout(() => clearInterval(interval), 1000);
-          }
-          if (isSelected3 === "isSelected") {
-            setisPause(true);
-            const interval = setInterval(
-              () => setTime(THIRD_TIME_IN_SECONDS),
-              1
-            );
-            setTimeout(() => clearInterval(interval), 1000);
-          }
-        }}
+        onClick={resetTimer}
         className="bg-orange-datail rounded-full fixed top-4 right-4 text-lg flex p-2"
       >
         <BiReset className="text-3xl" />
