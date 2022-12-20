@@ -33,21 +33,15 @@ export const Starter = () => {
         onClick={() => {
           if (isSelected1 === "isSelected") {
             setisPause(true);
-            setTimeout(() => {
-              setTime(INITIAL_TIME_IN_SECONDS);
-            }, 750);
+            setTime(INITIAL_TIME_IN_SECONDS);
           }
           if (isSelected2 === "isSelected") {
             setisPause(true);
-            setTimeout(() => {
-              setTime(SECOND_TIME_IN_SECONDS);
-            }, 750);
+            setTime(SECOND_TIME_IN_SECONDS);
           }
           if (isSelected3 === "isSelected") {
             setisPause(true);
-            setTimeout(() => {
-              setTime(THIRD_TIME_IN_SECONDS);
-            }, 750);
+            setTime(THIRD_TIME_IN_SECONDS);
           }
         }}
         className="bg-orange-datail rounded-full fixed top-4 right-4 text-lg flex p-2"
@@ -64,7 +58,7 @@ export const Starter = () => {
                 if (!isSelected1) {
                   setTimeout(() => {
                     setTime(INITIAL_TIME_IN_SECONDS);
-                  }, 750);
+                  }, 500);
                 }
               }}
               className={` ${isSelected1} relative inline-block z-10`}
@@ -79,7 +73,7 @@ export const Starter = () => {
                 if (!isSelected2) {
                   setTimeout(() => {
                     setTime(SECOND_TIME_IN_SECONDS);
-                  }, 750);
+                  }, 500);
                 }
               }}
               className={` ${isSelected2} relative inline-block z-10`}
@@ -94,7 +88,7 @@ export const Starter = () => {
                 if (!isSelected3) {
                   setTimeout(() => {
                     setTime(THIRD_TIME_IN_SECONDS);
-                  }, 750);
+                  }, 500);
                 }
               }}
               className={` ${isSelected3} relative inline-block z-10`}

@@ -67,33 +67,33 @@ html {
 
 .moveStarterUp2 {
   animation-name: moveStarterUp2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 .moveStarterDown2 {
   animation-name: moveStarterDown2;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 .moveStarterUp {
   transform: translate(0, 0);
   animation-name: moveStarterUp;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 .moveStarterDown {
   animation-name: moveStarterDown;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 .moveStarterUp3 {
   animation-name: moveStarterUp3;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 .moveStarterDown3 {
   animation-name: moveStarterDown3;
-  animation-duration: 1.5s;
+  animation-duration: 1s;
 }
 
 @keyframes moveStarterUp {
